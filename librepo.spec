@@ -4,7 +4,7 @@
 #
 Name     : librepo
 Version  : 1.8.1
-Release  : 5
+Release  : 6
 URL      : https://github.com/rpm-software-management/librepo/archive/1.8.1.tar.gz
 Source0  : https://github.com/rpm-software-management/librepo/archive/1.8.1.tar.gz
 Summary  : No detailed summary available
