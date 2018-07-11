@@ -1,9 +1,11 @@
 librepo.so.0:appendFdValue
 librepo.so.0:appendPath
+librepo.so.0:cleanup
 librepo.so.0:compare_records
 librepo.so.0:create_repomd_xml_download_targets
 librepo.so.0:error_handling
 librepo.so.0:fillInvalidationValues
+librepo.so.0:handle_failure
 librepo.so.0:hmfcb
 librepo.so.0:lr_best_checksum
 librepo.so.0:lr_char_handler
@@ -71,6 +73,7 @@ librepo.so.0:lr_lrmirrorlist_nth
 librepo.so.0:lr_lrmirrorlist_nth_url
 librepo.so.0:lr_malloc
 librepo.so.0:lr_malloc0
+librepo.so.0:lr_metadatatarget_append_error
 librepo.so.0:lr_metadatatarget_free
 librepo.so.0:lr_metadatatarget_new
 librepo.so.0:lr_metadatatarget_new2
@@ -127,6 +130,7 @@ librepo.so.0:lr_xml_parser_warning
 librepo.so.0:lr_xml_parser_warning_logger
 librepo.so.0:lr_yum_download_repo
 librepo.so.0:lr_yum_download_repos
+librepo.so.0:lr_yum_download_url
 librepo.so.0:lr_yum_error_quark
 librepo.so.0:lr_yum_perform
 librepo.so.0:lr_yum_repo_free
