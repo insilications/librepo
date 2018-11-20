@@ -4,7 +4,7 @@
 #
 Name     : librepo
 Version  : 1.9.2
-Release  : 17
+Release  : 18
 URL      : https://github.com/rpm-software-management/librepo/archive/1.9.2.tar.gz
 Source0  : https://github.com/rpm-software-management/librepo/archive/1.9.2.tar.gz
 Summary  : Repodata downloading library
@@ -31,14 +31,6 @@ BuildRequires : zlib-dev
 %description
 A library providing C and Python (libcURL like) API to downloading repository
 metadata.
-
-%package abi
-Summary: abi components for the librepo package.
-Group: Default
-
-%description abi
-abi components for the librepo package.
-
 
 %package dev
 Summary: dev components for the librepo package.
@@ -93,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542316150
+export SOURCE_DATE_EPOCH=1542747752
 mkdir -p clr-build
 pushd clr-build
 %cmake .. -DPYTHON_DESIRED=3 -DWITH_TESTS=OFF
@@ -101,7 +93,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1542316150
+export SOURCE_DATE_EPOCH=1542747752
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/librepo
 cp COPYING %{buildroot}/usr/share/package-licenses/librepo/COPYING
@@ -111,10 +103,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files abi
-%defattr(-,root,root,-)
-/usr/share/abi/librepo.so.0.abi
 
 %files dev
 %defattr(-,root,root,-)
