@@ -45,6 +45,8 @@ librepo.so.0:lr_free
 librepo.so.0:lr_get_best_checksum
 librepo.so.0:lr_get_curl_handle
 librepo.so.0:lr_get_metadata_failure_callback
+librepo.so.0:lr_get_recursive_files
+librepo.so.0:lr_get_recursive_files_rec
 librepo.so.0:lr_gettmpdir
 librepo.so.0:lr_gettmpfile
 librepo.so.0:lr_global_init
@@ -152,5 +154,6 @@ librepo.so.0:lr_yum_repomd_get_highest_timestamp
 librepo.so.0:lr_yum_repomd_get_record
 librepo.so.0:lr_yum_repomd_init
 librepo.so.0:lr_yum_repomd_parse_file
+librepo.so.0:prepare_repo_download_std_target
 librepo.so.0:prepare_repo_download_targets
 librepo.so.0:process_repomd_xml
