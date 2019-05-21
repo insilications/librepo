@@ -3,6 +3,5 @@
 check-dev
 doxygen
 libassuan-dev
-libgpg-error-dev
 python3-dev
 zlib-dev
