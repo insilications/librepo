@@ -4,7 +4,7 @@
 #
 Name     : librepo
 Version  : 1.9.6
-Release  : 23
+Release  : 24
 URL      : https://github.com/rpm-software-management/librepo/archive/1.9.6.tar.gz
 Source0  : https://github.com/rpm-software-management/librepo/archive/1.9.6.tar.gz
 Summary  : Repodata downloading library
