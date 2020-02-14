@@ -3,6 +3,7 @@ librepo.so.0:appendPath
 librepo.so.0:cleanup
 librepo.so.0:compare_records
 librepo.so.0:create_repomd_xml_download_targets
+librepo.so.0:ensure_socket_dir_exists
 librepo.so.0:error_handling
 librepo.so.0:fillInvalidationValues
 librepo.so.0:handle_failure
