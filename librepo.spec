@@ -4,7 +4,7 @@
 #
 Name     : librepo
 Version  : 1.11.2
-Release  : 30
+Release  : 31
 URL      : https://github.com/rpm-software-management/librepo/archive/1.11.2/librepo-1.11.2.tar.gz
 Source0  : https://github.com/rpm-software-management/librepo/archive/1.11.2/librepo-1.11.2.tar.gz
 Summary  : Repodata downloading library
@@ -36,6 +36,7 @@ Summary: dev components for the librepo package.
 Group: Development
 Requires: librepo-lib = %{version}-%{release}
 Provides: librepo-devel = %{version}-%{release}
+Requires: librepo = %{version}-%{release}
 Requires: librepo = %{version}-%{release}
 
 %description dev
@@ -86,9 +87,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581716093
+export SOURCE_DATE_EPOCH=1583167876
 mkdir -p clr-build
 pushd clr-build
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -102,7 +104,7 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1581716093
+export SOURCE_DATE_EPOCH=1583167876
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/librepo
 cp %{_builddir}/librepo-1.11.2/COPYING %{buildroot}/usr/share/package-licenses/librepo/01a6b4bf79aca9b556822601186afab86e8c4fbf
