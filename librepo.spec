@@ -16,32 +16,124 @@ Requires: librepo-python = %{version}-%{release}
 Requires: librepo-python3 = %{version}-%{release}
 BuildRequires : Flask
 BuildRequires : Sphinx
+BuildRequires : acl-staticdev
+BuildRequires : automake
+BuildRequires : automake-dev
+BuildRequires : binutils-dev
+BuildRequires : binutils-extras
+BuildRequires : bison
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-distutils3
 BuildRequires : bzip2-dev
 BuildRequires : bzip2-staticdev
 BuildRequires : check-dev
+BuildRequires : compat-lua-53
+BuildRequires : compat-lua-53-abi
+BuildRequires : compat-lua-53-bin
+BuildRequires : compat-lua-53-dev
+BuildRequires : compat-lua-53-lib
+BuildRequires : compat-lua-53-man
+BuildRequires : compat-lua-53-staticdev
 BuildRequires : curl-dev
+BuildRequires : db-dev
+BuildRequires : dbus-dev
+BuildRequires : dbus-glib
+BuildRequires : dbus-glib-dev
+BuildRequires : dejagnu
+BuildRequires : docbook-utils
+BuildRequires : docbook-xml
 BuildRequires : doxygen
+BuildRequires : elfutils-dev
 BuildRequires : expat-dev
 BuildRequires : expat-staticdev
+BuildRequires : expect
+BuildRequires : fakechroot
+BuildRequires : fakechroot-dev
+BuildRequires : fakechroot-staticdev
+BuildRequires : file
+BuildRequires : file-abi
+BuildRequires : file-bin
+BuildRequires : file-data
+BuildRequires : file-dev
+BuildRequires : file-lib
+BuildRequires : file-license
+BuildRequires : file-man
+BuildRequires : flex
+BuildRequires : gcc
+BuildRequires : gcc-abi
+BuildRequires : gcc-dev
+BuildRequires : gcc-dev32
+BuildRequires : gcc-doc
+BuildRequires : gcc-libgcc32
+BuildRequires : gcc-libs-math
+BuildRequires : gcc-libstdc++32
+BuildRequires : gcc-libubsan
+BuildRequires : gcc-locale
+BuildRequires : gdb
+BuildRequires : gdb-dev
+BuildRequires : gettext-bin
+BuildRequires : git
+BuildRequires : glib
+BuildRequires : glib-dev
+BuildRequires : glibc-abi
+BuildRequires : glibc-bench
+BuildRequires : glibc-bin
+BuildRequires : glibc-dev
+BuildRequires : glibc-dev32
+BuildRequires : glibc-doc
+BuildRequires : glibc-extras
+BuildRequires : glibc-lib-avx2
+BuildRequires : glibc-libc32
+BuildRequires : glibc-locale
+BuildRequires : glibc-nscd
+BuildRequires : glibc-staticdev
+BuildRequires : glibc-utils
+BuildRequires : gmp-dev
+BuildRequires : gmp-staticdev
 BuildRequires : gnupg
 BuildRequires : gpgme
 BuildRequires : gpgme-dev
+BuildRequires : graphviz
+BuildRequires : guile
+BuildRequires : json-c
+BuildRequires : json-c-dev
+BuildRequires : json-c-staticdev
+BuildRequires : libarchive
+BuildRequires : libarchive-dev
+BuildRequires : libarchive-staticdev
 BuildRequires : libassuan-dev
+BuildRequires : libcap
+BuildRequires : libcap-dev
+BuildRequires : libcomps-dev
+BuildRequires : libedit
+BuildRequires : libedit-dev
+BuildRequires : libffi-dev
+BuildRequires : libffi-staticdev
+BuildRequires : libgcc1
 BuildRequires : libgcrypt
 BuildRequires : libgcrypt-dev
+BuildRequires : libmodulemd
+BuildRequires : libmodulemd-dev
+BuildRequires : libmodulemd-staticdev
+BuildRequires : librepo-dev
+BuildRequires : librepo-staticdev
+BuildRequires : libsolv-dev
 BuildRequires : libstdc++
+BuildRequires : libtool
+BuildRequires : libtool-dev
+BuildRequires : libunwind
+BuildRequires : libunwind-dev
 BuildRequires : libxml2-dev
 BuildRequires : libxml2-staticdev
 BuildRequires : lz4-dev
 BuildRequires : lz4-staticdev
 BuildRequires : lzo-dev
-BuildRequires : lzo-dev32
 BuildRequires : lzo-staticdev
 BuildRequires : m4
 BuildRequires : nettle-dev
 BuildRequires : nettle-staticdev
+BuildRequires : nose
+BuildRequires : nspr-dev
 BuildRequires : openssl-dev
 BuildRequires : openssl-staticdev
 BuildRequires : pkg-config
@@ -50,12 +142,22 @@ BuildRequires : pkgconfig(check)
 BuildRequires : pkgconfig(glib-2.0)
 BuildRequires : pkgconfig(libcrypto)
 BuildRequires : pkgconfig(libxml-2.0)
+BuildRequires : popt
 BuildRequires : popt-dev
 BuildRequires : python3-dev
 BuildRequires : python3-staticdev
+BuildRequires : rpm
+BuildRequires : rpm-dev
+BuildRequires : smartcols
+BuildRequires : sqlite-autoconf
+BuildRequires : sqlite-autoconf-dev
+BuildRequires : sqlite-autoconf-staticdev
+BuildRequires : swig
+BuildRequires : unzip
 BuildRequires : xattr
 BuildRequires : xz-dev
 BuildRequires : xz-staticdev
+BuildRequires : zip
 BuildRequires : zlib
 BuildRequires : zlib-dev
 BuildRequires : zlib-staticdev
@@ -125,7 +227,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1618908900
+export SOURCE_DATE_EPOCH=1618980871
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -210,7 +312,7 @@ fi
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1618908900
+export SOURCE_DATE_EPOCH=1618980871
 rm -rf %{buildroot}
 pushd clr-build
 %make_install
